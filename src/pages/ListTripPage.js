@@ -5,17 +5,17 @@ import { useNavigate } from "react-router-dom";
 import { goBack, goToApplicationForm } from "../routes/coordinator";
 
 const MainContainer = styled.div`
-  font-family: 'Kanit', sans-serif;
+  font-family: "Kanit", sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-`
+`;
 
 const Header = styled.div`
   text-align: center;
   padding: 200px;
-`
+`;
 
 const Button = styled.button`
   margin-right: 10px;
@@ -25,18 +25,18 @@ const Button = styled.button`
   background-color: black;
   color: white;
   cursor: pointer;
-  &:hover{
+  &:hover {
     background-color: grey;
     color: black;
   }
-`
+`;
 
 const Card = styled.div`
   padding: 40px;
   margin-top: 50px;
   width: 50%;
   box-shadow: rgb(0 0 0 / 80%) 0px 8px 16px 0px;
-`
+`;
 
 const ListTripPage = () => {
   const [tripList, setTripList] = useState([]);
@@ -59,11 +59,21 @@ const ListTripPage = () => {
   const trips = tripList.map((trip) => {
     return (
       <Card>
-        <p><b>Name:</b> {trip.name}</p>
-        <p><b>Planeta:</b> {trip.planet}</p>
-        <p><b>Descrição:</b> {trip.description}</p>
-        <p><b>Data:</b> {trip.date}</p>
-        <p><b>Duração:</b> {trip.durationInDays}</p>
+        <p>
+          <b>Name:</b> {trip.name}
+        </p>
+        <p>
+          <b>Planeta:</b> {trip.planet}
+        </p>
+        <p>
+          <b>Descrição:</b> {trip.description}
+        </p>
+        <p>
+          <b>Data:</b> {trip.date}
+        </p>
+        <p>
+          <b>Duração:</b> {trip.durationInDays}
+        </p>
       </Card>
     );
   });
@@ -75,7 +85,7 @@ const ListTripPage = () => {
         <Button onClick={() => goBack(navigate)}>Voltar</Button>
         <Button onClick={() => goToApplicationForm(navigate)}>Inscrever</Button>
       </Header>
-        {trips}
+      {trips}
     </MainContainer>
   );
 };

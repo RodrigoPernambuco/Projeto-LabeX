@@ -5,15 +5,34 @@ import { useNavigate, useParams } from "react-router-dom";
 import { goBack, goToListTripPage } from "../routes/coordinator";
 import useAuthorization from "../hooks/useAuthorization";
 
-const Card = styled.div`
-  border: 1px solid black;
-  margin: 4px;
-  padding: 10px;
+const MainContainer = styled.div`
+  font-family: "Kanit", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
 `;
 
-const Header = styled.h1`
-  display: flex;
-  justify-content: column;
+const Card = styled.div`
+  padding: 40px;
+  margin-top: 50px;
+  width: 50%;
+  box-shadow: rgb(0 0 0 / 80%) 0px 8px 16px 0px;
+`;
+
+const Button = styled.button`
+  margin-right: 10px;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 25%;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  &:hover {
+    background-color: grey;
+    color: black;
+  }
 `;
 
 const TripDetailsPage = () => {
@@ -58,7 +77,7 @@ const TripDetailsPage = () => {
           auth: token,
         },
       })
-      .then((response) => {
+      .then(() => {
         tripDetail();
         approve
           ? alert("Seu candidato foi aprovado")
@@ -103,11 +122,10 @@ const TripDetailsPage = () => {
   });
 
   return (
-    <div>
-      <Header>
-        {detailHeader.name}
-        <button onClick={() => goBack(navigate)}>Voltar</button>
-      </Header>
+    <MainContainer>
+      <h1>{detailHeader.name}</h1>
+      <Button onClick={() => goBack(navigate)}>Voltar</Button>
+
       <Card>
         <p>
           <b>Nome:</b> {detailHeader.name}
@@ -128,7 +146,7 @@ const TripDetailsPage = () => {
 
       <div>{printCandidates}</div>
       <div>{decidedCandidates}</div>
-    </div>
+    </MainContainer>
   );
 };
 

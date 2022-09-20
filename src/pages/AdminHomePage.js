@@ -15,12 +15,12 @@ const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-`
+`;
 
 const ButtonSection = styled.div`
   display: flex;
   justify-content: center;
-`
+`;
 
 const Button = styled.button`
   margin-right: 10px;
@@ -30,15 +30,15 @@ const Button = styled.button`
   background-color: black;
   color: white;
   cursor: pointer;
-  &:hover{
+  &:hover {
     background-color: grey;
     color: black;
   }
-`
+`;
 
 const Text = styled.h1`
   text-align: center;
-`
+`;
 
 const Card = styled.div`
   display: flex;
@@ -47,7 +47,7 @@ const Card = styled.div`
   padding: 15px 30px;
   justify-content: space-between;
   margin: 20px;
-`
+`;
 
 const DeleteButton = styled.div`
   background-color: red;
@@ -56,11 +56,11 @@ const DeleteButton = styled.div`
   cursor: pointer;
   padding: 20px;
   border-radius: 30%;
-  &:hover{
+  &:hover {
     background-color: grey;
     color: red;
   }
-`
+`;
 
 const AdminHomePage = () => {
   const [tripList, setTripList] = useState([]);
@@ -98,7 +98,7 @@ const AdminHomePage = () => {
       })
       .then(() => {
         cardTrip();
-        alert('Viagem deletada com sucesso')
+        alert("Viagem deletada com sucesso");
         // onClickTrip(response.data.id)
         // setTripId(response.data.id)
       })
@@ -119,7 +119,12 @@ const AdminHomePage = () => {
   const tripCard = tripList.map((trip) => {
     return (
       <Card value={trip.id}>
-        <p onClick={() => onClickTripDetail(trip.id)} style={{cursor:'pointer'}}><b>{trip.name}</b></p>        
+        <p
+          onClick={() => onClickTripDetail(trip.id)}
+          style={{ cursor: "pointer" }}
+        >
+          <b>{trip.name}</b>
+        </p>
         <DeleteButton value={trip.id} onClick={() => deleteTrip(trip.id)}>
           <b>Delete</b>
         </DeleteButton>

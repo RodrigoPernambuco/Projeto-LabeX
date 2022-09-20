@@ -5,21 +5,21 @@ import { useNavigate } from "react-router-dom";
 import { goToListTripPage, goToLogin } from "../routes/coordinator";
 
 const MainContainer = styled.div`
-  font-family: 'Kanit', sans-serif;
+  font-family: "Kanit", sans-serif;
   width: 100%;
-`
+`;
 
 const Home = styled.div`
   text-align: center;
   padding-top: 150px;
-`
+`;
 
 const ButtonSection = styled.div`
   display: flex;
   justify-content: space-evenly;
   text-align: center;
   padding-top: 10%;
-`
+`;
 
 const Button = styled.button`
   border: none;
@@ -28,11 +28,11 @@ const Button = styled.button`
   background-color: black;
   color: white;
   cursor: pointer;
-  &:hover{
+  &:hover {
     background-color: grey;
     color: black;
   }
-`
+`;
 
 const HomePage = () => {
   const navigate = useNavigate();

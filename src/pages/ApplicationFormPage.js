@@ -15,6 +15,12 @@ const MainContainer = styled.div`
   margin: auto;
 `;
 
+const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
 const Form = styled.div`
   display: flex;
   flex-direction: column;
@@ -28,21 +34,21 @@ const Button = styled.button`
   background-color: black;
   color: white;
   cursor: pointer;
-  &:hover{
+  &:hover {
     background-color: grey;
     color: black;
   }
-`
+`;
 
 const Input = styled.input`
   width: 475px;
   padding: 10px;
-`
+`;
 
 const Select = styled.select`
   width: 500px;
   padding: 10px;
-`
+`;
 
 const ApplicationFormPage = () => {
   useEffect(() => {
@@ -102,8 +108,8 @@ const ApplicationFormPage = () => {
 
   return (
     <MainContainer>
+      <h1>Inscrever-se</h1>
       <Form>
-        <h1>Inscrever-se</h1>
         <form onSubmit={submitApplication}>
           <p>
             <Select value={trip} onChange={onChangeTrip}>
@@ -167,9 +173,10 @@ const ApplicationFormPage = () => {
               {countryOption}
             </Select>
           </p>
-
-          <Button>Enviar</Button>
-          <Button onClick={() => goBack(navigate)}>Voltar</Button>
+          <ButtonContainer>
+            <Button>Enviar</Button>
+            <Button onClick={() => goBack(navigate)}>Voltar</Button>
+          </ButtonContainer>
         </form>
       </Form>
     </MainContainer>
