@@ -1,9 +1,17 @@
-WireFrame: 
+🛠️ Tecnologias/ferramentas utilizadas
+React
+JavaScript
+HTML 5
+CSS 3
+Axios
+Styled-Components
 
-Home - https://wireframe.cc/dAewmu
-Lista de Viagens - https://wireframe.cc/ex0vV8
-Formulário - https://wireframe.cc/3eew9W
-Página de Login - https://wireframe.cc/qks1U0
-Home ADM - https://wireframe.cc/QQIH44
-Detalhe de Viagem - https://wireframe.cc/F4G4as
-Criar Viagem - https://wireframe.cc/czFoqb
+💻 Projeto
+O LabeX segue o modelo de website em que é possível criar viagens espaciais, administrar as viagens e aceitar participantes para as mesmas.
+
+✨ Deploy da aplicação
+Você pode visualizar o projeto pelo seguinte link: https://futureeatsa-shaw.surge.sh
+
+✒️ Autor
+
+Rodrigo Pernambuco https://github.com/RodrigoPernambuco
