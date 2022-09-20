@@ -10,7 +10,7 @@ Styled-Components
 O LabeX segue o modelo de website em que é possível criar viagens espaciais, administrar as viagens e aceitar participantes para as mesmas.
 
 ✨ Deploy da aplicação
-Você pode visualizar o projeto pelo seguinte link: https://futureeatsa-shaw.surge.sh
+Você pode visualizar o projeto pelo seguinte link: https://acrid-whistle.surge.sh/
 
 ✒️ Autor
 
